@@ -35,12 +35,18 @@ ActiveRecord::Schema.define(version: 20160512153320) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
+    t.string   "user_name"
     t.string   "email"
+    t.string   "address_street"
+    t.string   "address_suite"
+    t.string   "address_city"
+    t.string   "address_zip_code"
+    t.string   "phone"
     t.string   "website"
     t.string   "password"
     t.integer  "retrieved_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
