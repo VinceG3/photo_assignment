@@ -1,3 +1,33 @@
+# == Route Map
+#
+#     Prefix Verb   URI Pattern                Controller#Action
+#       root GET    /                          users#index
+#     albums GET    /albums(.:format)          albums#index
+#            POST   /albums(.:format)          albums#create
+#  new_album GET    /albums/new(.:format)      albums#new
+# edit_album GET    /albums/:id/edit(.:format) albums#edit
+#      album GET    /albums/:id(.:format)      albums#show
+#            PATCH  /albums/:id(.:format)      albums#update
+#            PUT    /albums/:id(.:format)      albums#update
+#            DELETE /albums/:id(.:format)      albums#destroy
+#     photos GET    /photos(.:format)          photos#index
+#            POST   /photos(.:format)          photos#create
+#  new_photo GET    /photos/new(.:format)      photos#new
+# edit_photo GET    /photos/:id/edit(.:format) photos#edit
+#      photo GET    /photos/:id(.:format)      photos#show
+#            PATCH  /photos/:id(.:format)      photos#update
+#            PUT    /photos/:id(.:format)      photos#update
+#            DELETE /photos/:id(.:format)      photos#destroy
+#      users GET    /users(.:format)           users#index
+#            POST   /users(.:format)           users#create
+#   new_user GET    /users/new(.:format)       users#new
+#  edit_user GET    /users/:id/edit(.:format)  users#edit
+#       user GET    /users/:id(.:format)       users#show
+#            PATCH  /users/:id(.:format)       users#update
+#            PUT    /users/:id(.:format)       users#update
+#            DELETE /users/:id(.:format)       users#destroy
+#
+
 Rails.application.routes.draw do
   root 'users#index'
   resources :albums

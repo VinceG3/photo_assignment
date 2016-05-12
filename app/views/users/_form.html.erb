@@ -16,8 +16,32 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :user_name %><br>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address_street %><br>
+    <%= f.text_field :address_street %>
+  </div>
+  <div class="field">
+    <%= f.label :address_suite %><br>
+    <%= f.text_field :address_suite %>
+  </div>
+  <div class="field">
+    <%= f.label :address_city %><br>
+    <%= f.text_field :address_city %>
+  </div>
+  <div class="field">
+    <%= f.label :address_zip_code %><br>
+    <%= f.text_field :address_zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
   </div>
   <div class="field">
     <%= f.label :website %><br>
@@ -26,10 +50,6 @@
   <div class="field">
     <%= f.label :password %><br>
     <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :retrieved_id %><br>
-    <%= f.number_field :retrieved_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
