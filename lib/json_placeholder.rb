@@ -8,6 +8,9 @@ module JsonPlaceholder
     # need to add relations after the data is loaded
     Album.add_relations!
     Photo.add_relations!
+    # Noticed after I finished these that the add relation logic really still
+    # belongs in this module as it's still dealing with the json_placeholder
+    # schema. Moving on rather than refactoring in the interest of time.
   end
 
   def self.retrieve_albums

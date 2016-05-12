@@ -6,19 +6,20 @@
 </p>
 
 <p>
-  <strong>Retrieved:</strong>
-  <%= @album.retrieved_id %>
-</p>
-
-<p>
-  <strong>Retrieved user:</strong>
-  <%= @album.retrieved_user_id %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @album.user_id %>
+  <%= @album.user.user_name %>
 </p>
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
+<p>
+	<% @album.photos.each do |photo| %>
+	  <tr>
+	    <td>
+	    	<%= link_to photo do %>
+		    	<img src=<%= photo.thumbnail_url %>>
+		    <% end %>
+	    </td>
+	  </tr>
+	<% end %>
+</p>
+
 <%= link_to 'Back', albums_path %>

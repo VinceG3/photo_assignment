@@ -1,34 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <img src=<%= @photo.url %>>
+</p>
+
+<p>
   <%= @photo.title %>
 </p>
-
-<p>
-  <strong>Retrieved:</strong>
-  <%= @photo.retrieved_id %>
-</p>
-
-<p>
-  <strong>Album:</strong>
-  <%= @photo.album_id %>
-</p>
-
-<p>
-  <strong>Retrieved album:</strong>
-  <%= @photo.retrieved_album_id %>
-</p>
-
-<p>
-  <strong>Thumbnail url:</strong>
-  <%= @photo.thumbnail_url %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @photo.url %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
