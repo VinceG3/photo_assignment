@@ -1,25 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @album.title %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @album.user.user_name %>
-</p>
-
-<p>
-	<% @album.photos.each do |photo| %>
-	  <tr>
-	    <td>
-	    	<%= link_to photo do %>
-		    	<img src=<%= photo.thumbnail_url %>>
-		    <% end %>
-	    </td>
-	  </tr>
-	<% end %>
-</p>
+<%= react_component 'ShowAlbum', album: @album, photos: @album.photos %>
 
 <%= link_to 'Back', albums_path %>

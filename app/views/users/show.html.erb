@@ -1,37 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<%= react_component 'ShowUser', user: @user, albums: @albums %>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <%= link_to 'Back', users_path %>
 </p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @user.website %>
-</p>
-
-<h2>Albums</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Thumbnail</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user.albums.each do |album| %>
-      <tr>
-        <td><%= link_to album.title, album %></td>
-        <td><img src=<%= album.thumbnail_url %>></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= link_to 'Back', users_path %>

@@ -1,9 +1,4 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <img src=<%= @photo.url %>>
-</p>
+<%= react_component 'ShowPhoto', photo: @photo %>
 
-<p>
-  <%= @photo.title %>
-</p>

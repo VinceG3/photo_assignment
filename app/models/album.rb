@@ -24,4 +24,12 @@ class Album < ActiveRecord::Base
   def thumbnail_url
     photos.first.thumbnail_url
   end
+
+  def as_json(options = {})
+    super.merge({thumbnail_url: thumbnail_url, user_name: user_name})
+  end
+
+  def user_name
+    user.user_name
+  end
 end
