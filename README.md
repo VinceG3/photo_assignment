@@ -22,5 +22,10 @@ React is actually pretty cool, I could see myself getting to know it as well as 
 `app/assets/javascripts/components`, they're full-fledged views and they deserve
 to be in `app/views/components` at least if not just `app/components`
 
-That said, thanks for giving me the opportunity to dig into a new framework. Might start
+Going forward, I guess the next step would be to paginate the Album view, for that I
+would first abstract the Pagination component so it can handle more than 4 results to a
+page, then try to reuse it to display maybe 8-12 thumbnails at a time. I'd make
+`elementsPerPage` a prop and modify the indexes in the render function to use them.
+
+All that said, thanks for giving me the opportunity to dig into a new framework. Might start
 using it on my personal projects.
